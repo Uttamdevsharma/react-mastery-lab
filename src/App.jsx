@@ -1,36 +1,26 @@
 import "./App.css";
 
-function Item({ name, isPacked }) {
-
-  const ischeckMark = isPacked ? "✅" : null ;
-  return (
-     <li className="item">
-      {name} {ischeckMark }
-      </li>
-  );
-  
-}
+const people = [
+  'Creola Katherine Johnson: mathematician',
+  'Mario José Molina-Pasquel Henríquez: chemist',
+  'Mohammad Abdus Salam: physicist',
+  'Percy Lavon Julian: chemist',
+  'Subrahmanyan Chandrasekhar: astrophysicist'
+];
 
 function App() {
+  const listItems = people.map(person =>
+    <li key={person}>{person}</li>
+  );
+
   return (
-    <section>
-      <h1>Sally Ride's Packing List</h1>
+    <div className="list">
+      <h2>Peoples</h2>
       <ul>
-        <Item 
-          isPacked={true} 
-          name="Space suit" 
-        />
-        <Item 
-          isPacked={true} 
-          name="Helmet with a golden leaf" 
-        />
-        <Item 
-          isPacked={false} 
-          name="Photo of Tam" 
-        />
+        {listItems}
       </ul>
-    </section>
+    </div>
   );
 }
 
-export default App
+export default App;
