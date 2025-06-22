@@ -5,7 +5,6 @@ const BioData = (props) => {
         <div className="bio-data">
             <h2>Biodata of {props.name}</h2>
             <hr/>
-
             <div className="personal-info">
                 <p>Age : {props.age}</p>
                 <p>Phone : {props.phone}</p>
