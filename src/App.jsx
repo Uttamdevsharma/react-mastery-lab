@@ -1,46 +1,36 @@
-import BioData from "./components/BioData"
+import "./App.css";
 
-const bioDataInfo = [
-  {
-  name : "uttam sharma",
-  age : 25,
-  phone : "+88012876876",
-  email : "uttam@gmail.com",
-  skills : ["js","react"],
-},
+function Item({ name, isPacked }) {
 
-{
-  name : "sharma",
-  age : 24,
-  phone : "+88012876876",
-  email : "sharma@gmail.com",
-  skills : ["js"],
+  const ischeckMark = isPacked ? "✅" : null ;
+  return (
+     <li className="item">
+      {name} {ischeckMark }
+      </li>
+  );
+  
 }
-];
-
 
 function App() {
-
   return (
-
-    <>
-    {bioDataInfo.map((biodata) => (
-
-      <BioData
-
-      name={biodata.name}
-      age={biodata.age}
-      phone={biodata.phone}
-      email={biodata.email}
-      skills={biodata.skills} 
-      />
-
-    ))}
-    </>
+    <section>
+      <h1>Sally Ride's Packing List</h1>
+      <ul>
+        <Item 
+          isPacked={true} 
+          name="Space suit" 
+        />
+        <Item 
+          isPacked={true} 
+          name="Helmet with a golden leaf" 
+        />
+        <Item 
+          isPacked={false} 
+          name="Photo of Tam" 
+        />
+      </ul>
+    </section>
   );
-
- 
 }
 
 export default App
-
