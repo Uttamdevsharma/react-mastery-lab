@@ -1,26 +1,14 @@
 import "./App.css";
+import Counter from "./components/counter";
 
-const people = [
-  'Creola Katherine Johnson: mathematician',
-  'Mario José Molina-Pasquel Henríquez: chemist',
-  'Mohammad Abdus Salam: physicist',
-  'Percy Lavon Julian: chemist',
-  'Subrahmanyan Chandrasekhar: astrophysicist'
-];
 
-function App() {
-  const listItems = people.map(person =>
-    <li key={person}>{person}</li>
-  );
+function App(){
 
   return (
-    <div className="list">
-      <h2>Peoples</h2>
-      <ul>
-        {listItems}
-      </ul>
-    </div>
-  );
+    <Counter/>
+  )
+
 }
+  
 
 export default App;
