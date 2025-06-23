@@ -6,6 +6,7 @@ import Artist from "./components/Artist";
 function App(){
 
   return (
+    
     <>
     <Counter/>
 
