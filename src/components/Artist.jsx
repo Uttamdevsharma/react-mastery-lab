@@ -3,7 +3,7 @@ import artistsAll from "../Data/artist-data";
 
 export default function Artist(){
 
-    const[artists, setArtists] = useState(artistsAll);
+    const[artists,  setArtists] = useState(artistsAll);
 
 
     return(
