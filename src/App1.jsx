@@ -12,6 +12,7 @@ function App1() {
       name: 'Mario José Molina-Pasquel Henríquez',
       profession: 'chemist',
     },
+    
     {
       id: 2,
       name: 'Mohammad Abdus Salam',
