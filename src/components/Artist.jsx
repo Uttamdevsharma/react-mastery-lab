@@ -5,13 +5,37 @@ export default function Artist(){
 
     const[artists,  setArtists] = useState(artistsAll);
 
+    const deleteArtist = (id) => {
+
+        const NewDelArray = artists.filter(person => person.id !== id);
+        setArtists(NewDelArray);
+
+    };
+
+    const addSubmit = () => {
+
+        const uttam = {id: 4 , name : "Uttam"};
+        const newArray = [...artists , uttam];
+
+        setArtists(newArray);
+    }
+
 
     return(
         <>
+        <div>
+            <button onClick={addSubmit}>Add Uttam</button>
+        </div>
 
-        <li>Artist</li>
-        <li>Artist2</li>
-        <li>Artist3</li>
+        <ul>
+            {artists.map((artist) => (
+                <li key={artist.id}>{artist.name}
+                {" "}
+                <button onClick={() => deleteArtist(artist.id)}> Delete </button>
+                <button>Edit</button>
+                </li>
+            ))}
+        </ul>
         
         </>
     )

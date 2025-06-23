@@ -1,5 +1,6 @@
 import "./App.css";
 import Counter from "./components/counter";
+import Artist from "./components/Artist";
 
 
 function App(){
