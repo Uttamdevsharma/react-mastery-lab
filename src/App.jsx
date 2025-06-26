@@ -10,7 +10,7 @@ const App = () => {
   useEffect( () => {
     console.log("Hey Effect");
 
-  },[count])
+  },[])
   // fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')
   //     .then((res) => res.json())
   //     .then((data) => {
