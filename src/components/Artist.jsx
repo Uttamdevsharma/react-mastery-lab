@@ -41,6 +41,7 @@ export default function Artist() {
             <button onClick={() => deleteArtist(artist.id)}>Delete</button>{" "}
             <button onClick={() => editArtist(artist.id)}>Edit</button>
           </li>
+          
         ))}
       </ul>
     </>
